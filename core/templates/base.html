@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{% block title %}{% endblock %} |Diego Benitez</title>
+
+    {% include "head_css.html" %}
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css">
+
+    <!-- Theme CSS -->
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    {% include "navbar.html" %}
+
+    <!-- Masthead -->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+
+            <!-- Masthead Avatar Image -->
+            <img class="masthead-avatar mb-5" src="{% static 'core/img/io2.jpg' %}" alt="" style="border-radius: 50%;">
+
+            <!-- Masthead Heading -->
+            <h1 class="masthead-heading text-uppercase mb-0">Diego Benitez</h1>
+
+            <!-- Icon Divider -->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <!-- Masthead Subheading -->
+            <p class="masthead-subheading font-weight-light mb-0">Software Developer </p>
+
+        </div>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+
+            <!-- Portfolio Section Heading -->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+
+            <!-- Icon Divider -->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <!-- Portfolio Grid Items -->
+            <div class="row">
+
+                <!-- Portfolio Item  -->
+             
+{% include "portfolio_modal.html" %}  
+
+                <!-- /.row -->
+
+            </div>
+    </section>
+
+
+    <!-- Portfolio Modal  -->
+   
+{% include "portfolio.html" %}
+                   
+
+
+    <!-- About Section -->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+        <div class="container">
+
+            <!-- About Section Heading -->
+            <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+
+            <!-- Icon Divider -->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <!-- About Section Content -->
+            <div class="row">
+                <div class="col-lg-4 ml-auto">
+                    <p class="lead">Me llamo Diego Benitez tengo 30 años, vivo en Avellaneda, soy Técnico en Informática y actualmente estudiante de
+                        desarrollo de software especializado en desarrollo web con Django by Python y JAVA.</p>
+                </div>
+                <div class="col-lg-4 mr-auto">
+                    <p class="lead"> Cuento con conocimientos de Html 5, css 3, js, java, Bootstrap 4 y JQuery me
+                        apasiona la tecnología y me capacito constantemente para poder aplicarla tanto en lo personal
+                        como profesional</p>
+                </div>
+            </div>
+
+            <!-- About Section Button -->
+            <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="{% url 'certificaciones' %}">
+                    <i class="fa fa-download mr-2"></i>
+                    Certificaciones!
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="page-section" id="contact">
+        <div class="container">
+
+            <!-- Contact Section Heading -->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+
+            <!-- Icon Divider -->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Form -->
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+
+                    <!-- Contact Section Form -->
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+
+                            {% block content %}
+                            {% endblock %}
+                        </div>
+                    </div>
+    </section>
+
+
+
+    {% include "footer.html" %}
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+
+
+    {% include "js.html" %}
+
+
+</body>
+
+</html>
